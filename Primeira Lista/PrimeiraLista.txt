@@ -1,0 +1,133 @@
+Exercício 1:
+valor = float(input('Valor do salário:'))
+reajuste = valor*1.35
+print('O salário reajustado é: {}'.format(reajuste))
+
+Exercício 2:
+import math as m
+
+xa = float(input('Xa: '))
+ya = float(input('Ya: '))
+xb = float(input('Xb: '))
+yb = float(input('Yb: '))
+
+result = m.sqrt(m.pow((xb-xa), 2) + m.pow((yb-ya), 2))
+
+print('A distância é: {:.2f}'.format(result))
+
+Exercício 3:
+import math as m
+
+lista = []
+
+for i in range (0,50,3):
+    lista.append(i)
+
+print('Lista: {}'.format((lista)))
+print('Tamanho da Lista: {}'.format(len(lista)))
+print('Maior Numero: {}'.format(max(lista)))
+print('Menor Numero: {}'.format(min(lista)))
+print('Soma dos numeros: {}'.format(sum(lista)))
+print('Tamanho da Lista: {}'.format(len(lista)))
+print('Lista Ordenada: {}'.format(sorted(lista)))
+reverso = reversed(lista)
+print('Lista Reversa: {}'.format(reverso))
+
+Exercício 4:
+nota1 = float(input('Digite a primeira nota: '))
+nota2 = float(input('Digite a segunda nota: '))
+
+media = (nota1 + nota2)/2.0
+
+print('Média: {}'.format(media))
+
+if (media >= 9):
+    print('Nota A')
+elif (media < 9 and media >= 7):
+    print('Nota B')
+elif (media < 7 and media >= 5):
+    print('Nota C')
+elif (media < 5 and media >= 3):
+    print('Nota D')
+else:
+    print('Nota E')
+
+Exercício 5:
+
+Exercício 6:
+import math as m
+
+num = int(input('Digite um numero para saber se ele é primo: '))
+count = 0
+
+for i in range (1,num):
+    if num%i == 0:
+        count += 1
+
+if count == 1:
+    print('O número É primo')
+else:
+    print('O número NÃO é primo')
+
+Exercício 7:
+def imprime(): 
+	for i in range (1,51):
+		 if ((i%3 == 0) and (i%5 == 0)): 
+			print('FizzBuzz') 
+		elif (i%3 == 0): 
+			print('Fizz')
+		 elif (i%5 == 0): 
+			print('Buzz') 
+		else: 
+			print(i) 
+
+imprime()
+
+Exercício 8:
+
+Exercício 9:
+import math as m
+
+lista = []
+
+while True:
+    num = float(input('Digite um numero maior do que 0 e para parar digite 0: '))
+    if num != 0:
+        lista.append(num)
+    else:
+        print('Soma dos numeros digitados {}'.format(sum(lista)))
+        print('Media dos numeros digitados {}'.format(sum(lista)/len(lista)))
+        break
+
+Exercício 10:
+
+Exercício 11:
+import math as m
+
+def imprimirTaxas():
+    
+def informarHorasEstacionadas():
+
+def consultarValorRecebido():
+
+
+def menu():
+    while True:
+        print('1 – Imprimir taxas do estacionamento.')
+        print('2 – Informar horas estacionada do veículo')
+        print('3 – Consultar valor recebido até o momento.')
+        print('0 – Sair.')
+        choose = int(input('Escolha uma das opçoes acima: '))
+        
+    if choose == 1:
+        imprimirTaxas()
+        break
+    elif choose == 2:
+        informarHorasEstacionadas()
+        break
+    elif choose == 3:
+        consultarValorRecebido()
+        break
+    elif choose == 4:
+        print('Voce saiu do programa')
+        break
