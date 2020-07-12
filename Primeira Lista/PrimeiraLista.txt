@@ -104,30 +104,96 @@ Exercício 10:
 Exercício 11:
 import math as m
 
-def imprimirTaxas():
-    
-def informarHorasEstacionadas():
-
-def consultarValorRecebido():
-
+carros_estacionados = {"DSD8526": "23:35",
+                       "GDS8975": "12:58",
+                       "FJD5685": "12:00"}
 
 def menu():
+    print('1 – Imprimir taxas do estacionamento.')
+    print('2 – Informar horas estacionada do veículo')
+    print('3 – Consultar valor recebido até o momento.')
+    print('0 – Sair.')
     while True:
-        print('1 – Imprimir taxas do estacionamento.')
-        print('2 – Informar horas estacionada do veículo')
-        print('3 – Consultar valor recebido até o momento.')
-        print('0 – Sair.')
         choose = int(input('Escolha uma das opçoes acima: '))
-        
-    if choose == 1:
-        imprimirTaxas()
-        break
-    elif choose == 2:
+        if choose == 1:
+            imprimirTaxas()
+            return
+        elif choose == 2:
+            informarHorasEstacionadas()
+            return
+        elif choose == 3:
+            consultarValorRecebido()
+            return
+        elif choose == 4:
+            print('Voce saiu do programa')
+            return
+        else:
+            print("Opcao invalida")
+ 
+def imprimirTaxas():
+    print("O estacionamento cobra R$2,00 pela entrada + R$0,50 por hora \nsendo o valor máximo para um periodo de 24h R$10,00")
+    print ("\n1 - para voltar para o menu")
+    print ("0 - para sair")
+    
+    opcao = int(input())
+    if opcao == 1:
+        menu()
+    elif opcao == 0:
+        return
+    else:
+        print("Opcao invalida")
+    
+def informarHorasEstacionadas():
+    placa = input("Placa: ")
+    if placa in carros_estacionados.keys():
+        print("Carro já cadastrado")
+    else:
+        horas = input("Tempo no esetacionamento(horas:minutos): ")
+        carros_estacionados[placa] = horas
+        print("Carro cadastrado com sucesso")
+
+
+    print("\n1 - para voltar para o menu")
+    print("2 - Cadastrar novo veiculo")
+    print("0 - para sair")
+    
+
+    opcao = int(input())
+    if opcao == 1:
+        menu()
+    elif opcao == 2:
         informarHorasEstacionadas()
-        break
-    elif choose == 3:
-        consultarValorRecebido()
-        break
-    elif choose == 4:
-        print('Voce saiu do programa')
-        break
+    elif opcao == 0:
+        return
+    else:
+        print("Opcao invalida")
+
+def consultarValorRecebido():
+    valor_total = 0
+    for placa in carros_estacionados:
+        valor_total += 2
+        tempo = carros_estacionados[placa].split(sep=":")
+        minutos = int(tempo[1])
+        horas = int(tempo[0])
+        if minutos > 0:
+            horas += 1
+        valor_total += 0.5 * horas
+        
+    print("Valor recebido até o momento: R$%.2f" % valor_total)
+    print("\n1 - para voltar para o menu")
+    print("0 - para sair")
+    
+
+    opcao = int(input())
+    if opcao == 1:
+        menu()
+    elif opcao == 0:
+        return
+    else:
+        print("Opcao invalida")
+
+
+
+   
+
+menu()
