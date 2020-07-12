@@ -1,0 +1,155 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2513
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fmodern\fcharset0 Courier;\f2\fnil\fcharset0 HelveticaNeue;
+}
+{\colortbl;\red255\green255\blue255;\red9\green9\blue9;\red0\green0\blue109;\red17\green109\blue18;
+\red18\green51\blue230;\red0\green29\blue164;\red0\green0\blue0;\red255\green255\blue255;\red212\green214\blue214;
+\red212\green213\blue214;\red5\green5\blue6;}
+{\*\expandedcolortbl;;\csgenericrgb\c3529\c3529\c3529;\csgenericrgb\c0\c0\c42745;\csgenericrgb\c6667\c42745\c7059;
+\csgenericrgb\c7059\c20000\c90196;\csgenericrgb\c0\c11373\c64314;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c86470\c86863\c87040;
+\cssrgb\c86275\c86667\c87059;\cssrgb\c1569\c1569\c1961\c7059;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 Exerc\'edcio 1:\
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f1\fs26 \cf2 valor = \cf3 float\cf2 (\cf3 input\cf2 (\cf4 'Valor do sal\'e1rio:'\cf2 ))\
+reajuste = valor*\cf5 1.35\
+\cf6 print\cf2 (\cf4 'O sal\'e1rio reajustado \'e9: \{\}'\cf2 .format(reajuste))\
+\
+Exerc\'edcio 2:\
+import math as m\
+\
+xa = float(input('Xa: '))\
+ya = float(input('Ya: '))\
+xb = float(input('Xb: '))\
+yb = float(input('Yb: '))\
+\
+result = m.sqrt(m.pow((xb-xa), 2) + m.pow((yb-ya), 2))\
+\
+print('A dist\'e2ncia \'e9: \{:.2f\}'.format(result))\
+\
+Exerc\'edcio 3:\
+import math as m\
+\
+lista = []\
+\
+for i in range (0,50,3):\
+    lista.append(i)\
+\
+print('Lista: \{\}'.format((lista)))\
+print('Tamanho da Lista: \{\}'.format(len(lista)))\
+print('Maior Numero: \{\}'.format(max(lista)))\
+print('Menor Numero: \{\}'.format(min(lista)))\
+print('Soma dos numeros: \{\}'.format(sum(lista)))\
+print('Tamanho da Lista: \{\}'.format(len(lista)))\
+print('Lista Ordenada: \{\}'.format(sorted(lista)))\
+reverso = reversed(lista)\
+print('Lista Reversa: \{\}'.format(reverso))\
+\
+Exerc\'edcio 4:\
+nota1 = float(input('Digite a primeira nota: '))\
+nota2 = float(input('Digite a segunda nota: '))\
+\
+media = (nota1 + nota2)/2.0\
+\
+print('M\'e9dia: \{\}'.format(media))\
+\
+if (media >= 9):\
+    print('Nota A')\
+elif (media < 9 and media >= 7):\
+    print('Nota B')\
+elif (media < 7 and media >= 5):\
+    print('Nota C')\
+elif (media < 5 and media >= 3):\
+    print('Nota D')\
+else:\
+    print('Nota E')\
+\
+Exerc\'edcio 5:\
+\
+Exerc\'edcio 6:\
+import math as m\
+\
+num = int(input('Digite um numero para saber se ele \'e9 primo: '))\
+count = 0\
+\
+for i in range (1,num):\
+    if num%i == 0:\
+        count += 1\
+\
+if count == 1:\
+    print('O n\'famero \'c9 primo')\
+else:\
+    print('O n\'famero N\'c3O \'e9 primo')\
+\
+Exerc\'edcio 7:\
+\pard\pardeftab720\partightenfactor0
+
+\f2\fs32 \cf7 \cb8 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec9 def imprime(): \
+	for i in range (1,51):\
+		 if ((i%3 == 0) and (i%5 == 0)): \
+			print('FizzBuzz') \
+		elif (i%3 == 0): \
+			print('Fizz')\
+		 elif (i%5 == 0): \
+			print('Buzz') \
+		else: \
+			print(i) \
+\
+imprime()\cf10 \cb11 \strokec10 \
+
+\f1\fs26 \cf2 \cb1 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+\cf2 Exerc\'edcio 8:\
+\
+Exerc\'edcio 9:\
+import math as m\
+\
+lista = []\
+\
+while True:\
+    num = float(input('Digite um numero maior do que 0 e para parar digite 0: '))\
+    if num != 0:\
+        lista.append(num)\
+    else:\
+        print('Soma dos numeros digitados \{\}'.format(sum(lista)))\
+        print('Media dos numeros digitados \{\}'.format(sum(lista)/len(lista)))\
+        break\
+\
+Exerc\'edcio 10:\
+\
+Exerc\'edcio 11:\
+import math as m\
+\
+def imprimirTaxas():\
+    \
+def informarHorasEstacionadas():\
+\
+def consultarValorRecebido():\
+\
+\
+def menu():\
+    while True:\
+        print('1 \'96 Imprimir taxas do estacionamento.')\
+        print('2 \'96 Informar horas estacionada do ve\'edculo')\
+        print('3 \'96 Consultar valor recebido at\'e9 o momento.')\
+        print('0 \'96 Sair.')\
+        choose = int(input('Escolha uma das op\'e7oes acima: '))\
+        \
+    if choose == 1:\
+        imprimirTaxas()\
+        break\
+    elif choose == 2:\
+        informarHorasEstacionadas()\
+        break\
+    elif choose == 3:\
+        consultarValorRecebido()\
+        break\
+    elif choose == 4:\
+        print('Voce saiu do programa')\
+        break\
+\
+    \
+}
