@@ -1,0 +1,33 @@
+Exercicio 1:
+
+import os, glob
+import csv
+import numpy as np
+import cv2
+import io
+imagens = []
+
+def comando(dirImagens, dirDestino, tamRed, tamMin):
+    imagens = os.listdir(dirImagens)
+    print(imagens)
+    arquivoTem = io.open("imagens.txt", "w")
+    arquivoNaoTem = io.open("imagens_desconsideradas.txt", "w")
+    for infile in imagens:
+        dirInfile = dirImagens + "\\" + infile
+        print(dirInfile)
+        imagem = cv2.imread(dirInfile)
+        height, width = imagem.shape[:2]
+        min_height = tamMin
+        min_width = tamMin
+        if min_height < height or min_width < width:
+            imagem = cv2.resize(imagem, (height*tamRed, width*tamRed))
+            diretorio = dirDestino + "\\" + infile
+            print(diretorio)
+            cv2.imwrite(diretorio, imagem)
+            print(infile + '\n')
+            arquivoTem.write(infile + ',' + '\n')
+        else:
+            arquivoNaoTem.write(infile + ", Altura:" + str(height) + ", Largura:" + str(width) + '\n')
+    arquivoTem.close()
+    arquivoNaoTem.close()
+comando(r"C:\Users\rapha\Pictures\Nova pasta",r"C:\Users\rapha\Pictures\Nova pasta (2)",2,100)
